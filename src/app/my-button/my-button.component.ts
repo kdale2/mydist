@@ -35,15 +35,19 @@ export class MyButtonComponent implements OnInit {
 
     console.log("buttonclicked method in mybutton.ts")
 
-    //this.likedImage = !this.likedImage; ??
+    //toggled between liked(button turns green) and unliked
+    this.likedImage = !this.likedImage; 
 
-    this.likedImage = true;
+    //just to keep track of how many times photo is liked
     this.count++;
 
+    //passes boolean member property to my-service method likeImage()
     this.myService.likeImage(this.likedImage);
 
+    //stores the info to render with template string literal elsewhere
     this.info = "Image is liked === " + this.likedImage;
 
+    //just for testing
     console.log("what we have in my button ts: " + this.likedImage);
     console.log("How many likes? " + this.count);
 

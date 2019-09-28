@@ -20,8 +20,10 @@ the user clicks the button is should update the member property. */
     
     this.result = 'Image is liked === ' + like.toString();
 
+    //just for debugging purposes
     console.log("result in my service = " + this.result);
 
+    //returns string stating whether or not image is liked
     return this.result;
 
   } 
