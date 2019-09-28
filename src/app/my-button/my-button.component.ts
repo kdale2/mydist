@@ -35,8 +35,8 @@ export class MyButtonComponent implements OnInit {
 
     console.log("buttonclicked method in mybutton.ts")
 
-    //this.likedImage = !this.likedImage;
-    
+    //this.likedImage = !this.likedImage; ??
+
     this.likedImage = true;
     this.count++;
 
