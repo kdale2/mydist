@@ -15,6 +15,9 @@ export class AppComponent {
   constructor(myMsgService: MessagesService) {
       this.myMsgService = myMsgService;
       this.messages = myMsgService.addMessages();
+
+      //test to make sure messages are retrieved from message service 
+      //and added to member property messages array
       console.log(this.messages);
    }
 

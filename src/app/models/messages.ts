@@ -1,6 +1,7 @@
 //messages class should contain a member property that 
 //is an array that holds messages.
 import { Message } from './message';
+import { User } from './user';
 
 export class Messages {
 

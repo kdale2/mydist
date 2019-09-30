@@ -21,8 +21,10 @@ member property that is an array of messages. */
   addMessages(): Message[] {
 
     let date: Date = new Date(2018, 0O5, 0O5, 17, 23, 42, 11);  
-    this.messages = [new Message('First message received.', date), 
+    this.messages = [new Message('This is the first message received!', date), 
                      new Message('Hello, me again.', date)];
+
+    //test to make sure messages print to console
     console.log(this.messages);
     return this.messages;
   }

@@ -7,8 +7,11 @@
 <app-my-button class = "button">
 
 </app-my-button>
+<br>
 
+<!-- prints out messages on browser underneath image and buttons -->
 <div class="messages">
-    <li *ngFor="let message of messages">{{ message.text }} <br> {{message.timestamp}}</li>
-  </div>
+    <p><b><u>Your messages</u></b></p>
+    <li *ngFor="let message of messages">{{ message.text }} <br> {{ message.timestamp }}</li>
+</div>
 

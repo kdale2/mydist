@@ -5,18 +5,28 @@ should update to have a green background color.
 
 Update: Button turns green when pressed. -->
 
+<!-- if photo is liked, turns button green and calls buttonClicked()-->
 <div>
     <button (click) = 
     "buttonClicked()" 
     [ngClass]="{'is-Liked' : likedImage}">Like!</button>
 </div>
-<br><br>
-<div>
-    <button (click) = 
-    "generateMessages()" 
-    >Generate messages in console with Timestamp</button>
-</div>
 
+<span id = "info">
+        <p>Number of likes: {{count}}</p>
+</span>
+
+<!-- prints out whether or not photo is currently liked based on member property -->
 <span id ="info">
     <p>{{info}}</p>
 </span>
+
+<br>
+<!--Unsure if this should go here. Press button to display msgs in console using message service-->
+<div>
+    <button (click) = 
+    "generateMessages()" 
+    >Generate messages in console</button>
+</div>
+
+

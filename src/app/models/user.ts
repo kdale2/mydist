@@ -1,7 +1,11 @@
+import { Message } from './message';
+import { Messages } from './messages';
+
 export class User {
 
     username: string;
     age: number;
+    myMessages: Message[];
 
     constructor(username: string, age:number) {
         this.username = username;
@@ -17,5 +21,9 @@ export class User {
 
     greetUser() {
         console.log("Hello, " + this.username);
+    }
+
+    retrieveMessages() {
+        return this.myMessages;
     }
 }

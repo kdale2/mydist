@@ -21,7 +21,6 @@ export class MyButtonComponent implements OnInit {
   constructor(myService: MyServiceService, messageService: MessagesService) { 
     this.myService = myService;
     this.messageService = messageService;
-    console.log("my button.ts constructor");
 
   }
 
@@ -36,12 +35,12 @@ export class MyButtonComponent implements OnInit {
 
   buttonClicked() {
 
-    console.log("buttonclicked method in mybutton.ts")
+    console.log("Button was clicked.")
 
-    //toggled between liked(button turns green) and unliked
+    //toggled between liked(button turns green) and unliked(not green)
     this.likedImage = !this.likedImage; 
 
-    //just to keep track of how many times photo is liked
+    //keeps track of how many times photo is liked
     if (this.likedImage === true) {
        this.count++;
     }
@@ -49,11 +48,11 @@ export class MyButtonComponent implements OnInit {
     //passes boolean member property to my-service method likeImage()
     this.myService.likeImage(this.likedImage);
 
-    //stores the info to render with template string literal elsewhere
+    //stores the info to render with template string literal in view
     this.info = "Image is liked === " + this.likedImage;
 
     //just for testing
-    console.log("what we have in my button ts: " + this.likedImage);
+    console.log("Photo liked? " + this.likedImage);
     console.log("How many likes? " + this.count);
 
   }
