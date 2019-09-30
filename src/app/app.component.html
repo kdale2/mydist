@@ -7,3 +7,8 @@
 <app-my-button class = "button">
 
 </app-my-button>
+
+<div class="messages">
+    <li *ngFor="let message of messages">{{ message.text }} <br> {{message.timestamp}}</li>
+  </div>
+

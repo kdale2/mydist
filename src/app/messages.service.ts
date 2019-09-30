@@ -15,17 +15,16 @@ member property that is an array of messages. */
 
   messages: Message[];
 
-  constructor() { }
+  constructor() { 
+  }
 
-
-  addMessages() {
+  addMessages(): Message[] {
 
     let date: Date = new Date(2018, 0O5, 0O5, 17, 23, 42, 11);  
-    var message = new Message("Hello", date);
-    var message2 = new Message("What is up", date);
-    this.messages.push(message);
-    this.messages.push(message2);
+    this.messages = [new Message('First message received.', date), 
+                     new Message('Hello, me again.', date)];
     console.log(this.messages);
+    return this.messages;
   }
 }
 

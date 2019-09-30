@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyServiceService } from './../my-service.service';
+import { MessagesService } from './../messages.service';
 
 @Component({
   selector: 'app-my-button',
@@ -15,9 +16,11 @@ export class MyButtonComponent implements OnInit {
   info: string;
   count: number = 0;
   myService: MyServiceService;
+  messageService: MessagesService;
 
-  constructor(myService: MyServiceService) { 
+  constructor(myService: MyServiceService, messageService: MessagesService) { 
     this.myService = myService;
+    this.messageService = messageService;
     console.log("my button.ts constructor");
 
   }
@@ -39,7 +42,9 @@ export class MyButtonComponent implements OnInit {
     this.likedImage = !this.likedImage; 
 
     //just to keep track of how many times photo is liked
-    this.count++;
+    if (this.likedImage === true) {
+       this.count++;
+    }
 
     //passes boolean member property to my-service method likeImage()
     this.myService.likeImage(this.likedImage);
@@ -51,6 +56,10 @@ export class MyButtonComponent implements OnInit {
     console.log("what we have in my button ts: " + this.likedImage);
     console.log("How many likes? " + this.count);
 
+  }
+
+  generateMessages() {
+    this.messageService.addMessages();
   }
 
 }

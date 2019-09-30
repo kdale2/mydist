@@ -5,7 +5,7 @@ When the button is clicked, component member property evaluates to true, the col
 should update to have a green background color. */
 
 .is-Liked {
-    background-color: green;
+    background-color: #2aad8c;
 }
 
 
