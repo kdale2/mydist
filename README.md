@@ -1,27 +1,6 @@
-# Mydist
+https://github.com/kdale2/mydist
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1) Created my-image and my-button components. Created my-service and messages services.
+2) When user clicks "like" button, button turns green, output renders to screen displaying whether or not image is currently liked using template string literal. This is handled using my-service.
+2) Created message, messages, and user classes. Instantiates messages, appenda to message object, messages display on screen under image. This is extra credit done using the *ngFor directive. 
+3) Pushed to github and uploaded via d2l.
