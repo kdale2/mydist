@@ -1,26 +1,24 @@
 import { Message } from './message';
 import { Messages } from './messages';
 
+
 export class User {
 
     username: string;
-    age: number;
-    myMessages: Message[];
+    userID: number;
+    myMessages: Messages;
 
-    constructor(username: string, age:number) {
+    constructor(username: string, userID:number, myMessages: Messages) {
         this.username = username;
-        this.age = age;
+        this.userID = userID;
+        this.myMessages = myMessages;
     }
 
     getUser() {
         return {
             username: this.username,
-            age: this.age
+            userID: this.userID
         }
-    }
-
-    greetUser() {
-        console.log("Hello, " + this.username);
     }
 
     retrieveMessages() {

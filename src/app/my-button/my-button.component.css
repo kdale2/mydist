@@ -1,5 +1,5 @@
 
-/* //Add a css class to the my-button.component.css file called is-liked and set the
+/* Add a css class to the my-button.component.css file called is-liked and set the
 “background-color” property to green. Add the ngClass property to the button element.
 When the button is clicked, component member property evaluates to true, the color
 should update to have a green background color. */

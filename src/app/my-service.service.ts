@@ -6,26 +6,22 @@ import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';
 })
 export class MyServiceService {
 
-  result: string;
-
-/* The service method likeImage should accept a
-boolean parameter and return a banged version of the param. So every time 
-the user clicks the button is should update the member property. */
+  like: boolean;
 
   constructor() {   }
 
-  likeImage(like: boolean): string {
+  likeImage(like: boolean): boolean {
     
-    this.result = 'Image is liked === ' + like.toString();
+    //take the input parameter and return banged parameter
+    this.like = !this.like;
 
     //just for debugging purposes
-    console.log("Result in my-service.ts after Like button is clicked: " + this.result);
+    //console.log("Result in my-service.ts after Like button is clicked: " + this.result);
 
-    //returns string stating whether or not image is liked
-    return this.result;
+    //returns boolean stating whether or not image is currently liked (liked = true)
+    return this.like;
 
   } 
-
 }
 
 

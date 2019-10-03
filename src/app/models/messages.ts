@@ -17,6 +17,5 @@ export class Messages {
 
     addMessage(message: Message) {
         this.messages.push(message);
-        
     }
 }
